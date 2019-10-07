@@ -1,0 +1,45 @@
+# Site Settings
+title: "Eithrael"
+email: "hello@eithrael.com"
+author_name: "Eithrael"
+description: ""
+baseurl: ""
+url: "https://eithrael.com"
+logo_url: /assets/logo.jpg
+permalink: "/:title"
+timezone: Europe/London
+twitter_username: "eithraelz"
+github_username: "eithrael"
+mathjax: true
+
+# Build settings
+highlighter: "rouge"
+markdown: "kramdown"
+kramdown:
+  input: "GFM"
+sass:
+  style: ":compressed"
+remote_theme: "heiswayi/the-plain"
+plugins:
+  - "jekyll-feed"
+  - "jekyll-remote-theme"
+  - "jekyll-sitemap"
+include: [ "robots.txt", "_img" ]
+exclude: [ "LICENSE", "README.md", "CNAME", "vendor", "Gemfile", "script" ]
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "null"
+  - scope:
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: "assets"
+    values:
+      image: true
